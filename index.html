@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Assignment using Classes and Constructors</h2>
+
+   <script>
+
+    class Vehicle{
+        constructor(made, model){
+            this.made = made;
+            this.model = model;
+        }
+        start(){
+            console.log(`The ${this.made} car of ${this.model} is starting....`);
+        }
+    }
+
+    class Car extends Vehicle{
+
+        super(made,model){
+            this.made = made;
+            this.model = model;
+        }
+
+        honk(){
+            console.log(`The ${this.made} modelled ${this.model} bike is honking heavily`);
+        }
+    }
+
+    class Bike extends Vehicle{
+        super(made,model){
+            this.made = made;
+            this.model = model;
+        }
+    }
+
+    const myCar = new Vehicle("Supra", "2023");
+    const myBike = new Car("Jawa", "2024");
+    myCar.start();
+    myBike.honk();
+
+
+
+   </script>
+</body>
+</html>
